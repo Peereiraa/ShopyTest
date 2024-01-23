@@ -20,16 +20,42 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-
+/**
+ * Actividad que representa el menú de administrador, proporcionando opciones como agregar prenda, gestionar usuarios, modificar prenda y cerrar sesión.
+ * Permite al administrador realizar diversas acciones relacionadas con la gestión de la aplicación.
+ *
+ * @author Pablo Pereira
+ * @version 1.0
+ */
 public class MenuPantallaAdminActivity extends AppCompatActivity {
 
 
+    /**
+     * Variables de la clase MenuPantallaAdminActivity.
+     */
     private View agregarprenda, gestionarusuarios, modificarprenda, borrarprenda;
 
+    /**
+     * TextView que muestra el nombre del administrador.
+     */
     private TextView textCerrarSesion, nombredeadmin;
+
+    /**
+     * ImageView utilizada para cerrar sesión al hacer clic.
+     */
     private ImageView imageCerrarSesion;
 
+    /**
+     * Instancia de FirebaseAuth utilizada para gestionar la autenticación de usuarios.
+     */
     private FirebaseAuth mAuth;
+
+
+    /**
+     * Método llamado cuando la actividad es creada. Configura la interfaz de usuario y asigna clics a las opciones del menú.
+     *
+     * @param savedInstanceState Objeto Bundle que contiene el estado previamente guardado de la actividad (puede ser nulo).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,6 +144,10 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Método que realiza la acción de cerrar sesión al hacer clic en el botón correspondiente.
+     * Muestra un cuadro de diálogo de confirmación antes de cerrar la sesión del usuario.
+     */
     private void cerrarSesion() {
         mAuth.signOut();
         Intent intent = new Intent(MenuPantallaAdminActivity.this, Login.class);
@@ -126,6 +156,9 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
         finish(); // Finaliza la actividad actual
     }
 
+    /**
+     * Método que carga los datos del usuario actual y muestra un mensaje de bienvenida en la interfaz de usuario.
+     */
     private void cargarDatos() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {

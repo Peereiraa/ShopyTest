@@ -21,23 +21,56 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Clase que representa la actividad para mostrar la lista de usuarios en el sistema de administración.
+ * Permite la visualización, búsqueda y realización de acciones específicas en los usuarios.
+ *
+ * @author Pablo Pereira
+ * @version 1.0
+ */
 public class ListaUsuarios extends AppCompatActivity {
 
+    /**
+     * RecyclerView utilizado para mostrar la lista de usuarios.
+     */
     private RecyclerView recyclerViewUsuarios;
+
+    /**
+     * Adaptador para el RecyclerView que maneja la lista de usuarios.
+     */
     private ListaUsuariosAdapter adapter;
+
+    /**
+     * Objeto para interactuar con la base de datos Firestore.
+     */
     private FirebaseFirestore db;
+
+    /**
+     * Vista para realizar búsquedas dentro de la lista de usuarios.
+     */
     private SearchView searchView;
+
+    /**
+     * Botón de acción flotante para mostrar opciones adicionales.
+     */
     FloatingActionButton botonaccion;
 
+    /**
+     * Método llamado cuando se crea la actividad.
+     *
+     * @param savedInstanceState Objeto que contiene datos anteriores acerca de la actividad (puede ser nulo).
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_usuarios);
 
+        // Inicializa el RecyclerView, el adaptador y otros componentes de la interfaz de usuario
         recyclerViewUsuarios = findViewById(R.id.recyclerViewUsuarios);
         searchView = findViewById(R.id.searchViewUsuarios);
         adapter = new ListaUsuariosAdapter(new ArrayList<>());
-         botonaccion = findViewById(R.id.botonaccion);
+        botonaccion = findViewById(R.id.botonaccion);
 
         recyclerViewUsuarios.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewUsuarios.setAdapter(adapter);
@@ -78,7 +111,9 @@ public class ListaUsuarios extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Método para cargar los usuarios desde Firestore y actualizar el adaptador con la lista de usuarios.
+     */
     private void cargarUsuariosDesdeFirestore() {
         // Obtener la referencia de la colección "user" en Firestore
         CollectionReference usuariosRef = db.collection("user");
@@ -99,6 +134,9 @@ public class ListaUsuarios extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Método para configurar el SearchView y gestionar la búsqueda en la lista de usuarios.
+     */
     private void setupSearchView() {
         // Configurar el listener para el SearchView
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

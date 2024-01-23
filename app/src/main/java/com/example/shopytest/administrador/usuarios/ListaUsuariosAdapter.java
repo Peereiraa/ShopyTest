@@ -31,18 +31,43 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Clase adaptadora para el RecyclerView que muestra la lista de usuarios en la interfaz de usuario.
+ * Permite la visualización y filtrado de usuarios, así como la realización de acciones específicas.
+ *
+ * @author Pablo Pereira
+ * @version 1.0
+ */
 public class ListaUsuariosAdapter extends RecyclerView.Adapter<ListaUsuariosAdapter.ViewHolder> {
 
+    /**
+     * Lista de DocumentSnapshot que representa la lista de usuarios a mostrar.
+     */
     private List<DocumentSnapshot> listaUsuarios;
+
+    /**
+     * Lista completa de DocumentSnapshot que se utiliza para el filtrado de búsqueda.
+     */
     private List<DocumentSnapshot> listaUsuariosCompleta;
 
+    /**
+     * Constructor de la clase adaptadora.
+     *
+     * @param documentos Lista inicial de DocumentSnapshot que representa la lista de usuarios.
+     */
     public ListaUsuariosAdapter(List<DocumentSnapshot> documentos) {
 
         this.listaUsuarios = documentos;
         this.listaUsuariosCompleta = new ArrayList<>(documentos);
     }
 
+    /**
+     * Método llamado para crear un nuevo ViewHolder cuando se necesita una nueva fila en el RecyclerView.
+     *
+     * @param parent   El ViewGroup en el que se inflará la nueva vista.
+     * @param viewType El tipo de vista de la nueva vista.
+     * @return Nuevo ViewHolder que contiene la vista inflada.
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,6 +75,12 @@ public class ListaUsuariosAdapter extends RecyclerView.Adapter<ListaUsuariosAdap
         return new ViewHolder(view);
     }
 
+    /**
+     * Método llamado para actualizar una fila del RecyclerView con los datos del usuario correspondiente.
+     *
+     * @param holder   ViewHolder que debe actualizarse.
+     * @param position La posición del elemento en el conjunto de datos.
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         DocumentSnapshot documento = listaUsuarios.get(position);
@@ -70,18 +101,32 @@ public class ListaUsuariosAdapter extends RecyclerView.Adapter<ListaUsuariosAdap
 
     }
 
+    /**
+     * Método que devuelve el número total de elementos en el conjunto de datos.
+     *
+     * @return Número total de elementos en el conjunto de datos.
+     */
     @Override
     public int getItemCount() {
         return listaUsuarios.size();
     }
 
+    /**
+     * Método para establecer nuevos documentos en la lista y actualizar el conjunto de datos.
+     *
+     * @param nuevosDocumentos Lista de nuevos DocumentSnapshot que representan la lista actualizada de usuarios.
+     */
     public void setDocumentos(List<DocumentSnapshot> nuevosDocumentos) {
         this.listaUsuarios = nuevosDocumentos;
         this.listaUsuariosCompleta = new ArrayList<>(nuevosDocumentos);
         notifyDataSetChanged();
     }
 
-
+    /**
+     * Método que devuelve un filtro para realizar búsquedas en la lista de usuarios.
+     *
+     * @return Filtro para realizar búsquedas en la lista de usuarios.
+     */
     public Filter getFilter() {
         return new Filter() {
             @Override
@@ -111,17 +156,40 @@ public class ListaUsuariosAdapter extends RecyclerView.Adapter<ListaUsuariosAdap
     }
 
 
-
+    /**
+     * Método que devuelve el DocumentSnapshot en la posición especificada.
+     *
+     * @param position La posición del elemento en el conjunto de datos.
+     * @return DocumentSnapshot en la posición especificada.
+     */
     public DocumentSnapshot getDocumentAtPosition(int position) {
         return listaUsuarios.get(position);
     }
 
+    /**
+     * Clase que representa un ViewHolder que contiene las vistas para mostrar información de un usuario.
+     */
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        /**
+         * ImageView para mostrar el logo o imagen del usuario.
+         */
         ImageView logoUsuario;
+
+        /**
+         * TextView para mostrar el nombre del usuario.
+         */
         TextView nombreUsuario;
+
+        /**
+         * TextView para mostrar el correo electrónico del usuario.
+         */
         TextView correoUsuario;
 
-
+        /**
+         * Constructor de la clase ViewHolder.
+         *
+         * @param itemView La vista que contiene las subvistas para mostrar la información del usuario.
+         */
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             logoUsuario = itemView.findViewById(R.id.logoUsuario);
@@ -131,14 +199,4 @@ public class ListaUsuariosAdapter extends RecyclerView.Adapter<ListaUsuariosAdap
 
         }
     }
-
-
-    }
-
-
-
-
-
-
-
-
+}

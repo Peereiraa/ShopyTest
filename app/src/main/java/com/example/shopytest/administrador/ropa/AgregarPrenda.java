@@ -248,6 +248,12 @@ public class AgregarPrenda extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * Sube la imagen seleccionada a Firebase Storage y actualiza la URL de la imagen en el documento de la prenda en Firestore.
+     *
+     * @param prendaId Identificador único de la prenda en Firestore.
+     */
     private void subirImagenAFirebaseStorage(String prendaId) {
         // Crear una referencia única para la imagen en Firebase Storage
         String nombreImagen = "imagen_" + prendaId + ".jpg";
@@ -281,6 +287,13 @@ public class AgregarPrenda extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Método llamado cuando se completa la acción de seleccionar una imagen desde la galería.
+     *
+     * @param requestCode Código de solicitud de la acción.
+     * @param resultCode  Código de resultado de la acción.
+     * @param data        Datos adicionales (en este caso, la URI de la imagen seleccionada).
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -297,7 +310,9 @@ public class AgregarPrenda extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * Abre la galería para que el usuario seleccione una imagen.
+     */
     private void abrirGaleria() {
         // Crear un Intent para seleccionar una imagen de la galería
         Intent intent = new Intent(Intent.ACTION_PICK);
@@ -305,6 +320,11 @@ public class AgregarPrenda extends AppCompatActivity {
         startActivityForResult(intent, SELECCIONAR_IMAGEN_REQUEST);
     }
 
+    /**
+     * Muestra un mensaje de tostada en la interfaz.
+     *
+     * @param mensaje Mensaje a mostrar.
+     */
     private void mostrarToast(String mensaje) {
         Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
     }

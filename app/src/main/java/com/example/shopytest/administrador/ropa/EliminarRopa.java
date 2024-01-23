@@ -19,23 +19,73 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * La clase EliminarRopa es una actividad de Android que permite eliminar prendas de ropa
+ * según el género (Hombre, Mujer, Niño). Utiliza Firebase Firestore como base de datos para
+ * almacenar y recuperar información sobre las prendas de ropa.
+ *
+ * @author Pablo Pereira
+ * @version 1.0
+ */
 public class EliminarRopa extends AppCompatActivity {
 
+    /**
+     * RecyclerView para mostrar las prendas de ropa para hombres.
+     */
     private RecyclerView recyclerViewHombre;
+
+    /**
+     * RecyclerView para mostrar las prendas de ropa para mujeres.
+     */
     private RecyclerView recyclerViewMujer;
+
+    /**
+     * RecyclerView para mostrar las prendas de ropa para niños.
+     */
     private RecyclerView recyclerViewNinos;
 
+    /**
+     * Adaptador para las prendas de ropa para hombres.
+     */
     private PrendaAdminAdapter adapterHombre;
+
+    /**
+     * Adaptador para las prendas de ropa para mujeres.
+     */
     private PrendaAdminAdapter adapterMujer;
+
+    /**
+     * Adaptador para las prendas de ropa para niños.
+     */
     private PrendaAdminAdapter adapterNinos;
 
+    /**
+     * CheckBox para seleccionar/deseleccionar prendas de ropa para hombres.
+     */
     private CheckBox checkHombre;
+
+    /**
+     * CheckBox para seleccionar/deseleccionar prendas de ropa para mujeres.
+     */
     private CheckBox checkMujer;
+
+    /**
+     * CheckBox para seleccionar/deseleccionar prendas de ropa para niños.
+     */
     private CheckBox checkNinos;
 
+    /**
+     * Instancia de Firebase Firestore para acceder a la base de datos.
+     */
     private FirebaseFirestore db;
 
 
+    /**
+     * Método llamado cuando la actividad se crea por primera vez. Se encarga de inicializar
+     * vistas, adaptadores y configurar listeners.
+     *
+     * @param savedInstanceState El estado guardado de la actividad.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -162,7 +212,11 @@ public class EliminarRopa extends AppCompatActivity {
     }
 
 
-
+    /**
+     * Obtiene las prendas de ropa para hombres de la base de datos Firestore y las carga en el adaptador.
+     *
+     * @param onPrendasLoadedListener Interfaz de escucha para manejar la carga de prendas.
+     */
     private void obtenerPrendasHombre(OnPrendasLoadedListener onPrendasLoadedListener) {
         // Obtener la referencia de la colección "PrendasRopa" en Firestore
         CollectionReference prendasRef = db.collection("PrendasRopa");
@@ -187,6 +241,11 @@ public class EliminarRopa extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Obtiene las prendas de ropa para mujeres de la base de datos Firestore y las carga en el adaptador.
+     *
+     * @param onPrendasLoadedListener Interfaz de escucha para manejar la carga de prendas.
+     */
     private void obtenerPrendasMujer(OnPrendasLoadedListener onPrendasLoadedListener){
         CollectionReference prendasRef = db.collection("PrendasRopa");
 
@@ -212,6 +271,11 @@ public class EliminarRopa extends AppCompatActivity {
 
     }
 
+    /**
+     * Obtiene las prendas de ropa para niños de la base de datos Firestore y las carga en el adaptador.
+     *
+     * @param onPrendasLoadedListener Interfaz de escucha para manejar la carga de prendas.
+     */
     private void obtenerPrendasNinos(OnPrendasLoadedListener onPrendasLoadedListener){
         CollectionReference prendasRef = db.collection("PrendasRopa");
 
@@ -237,25 +301,37 @@ public class EliminarRopa extends AppCompatActivity {
 
     }
 
-
-
-
-
-
-
+    /**
+     * Obtiene una lista de prendas de ropa para mujeres desde la base de datos (simulación).
+     *
+     * @return Lista de prendas de ropa para mujeres (simulación).
+     */
     private List<PrendaRopa> obtenerPrendasMujer() {
         // Obtener prendas de la categoría "Mujer" de tu base de datos
         // Devuelve una lista vacía como simulación.
         return new ArrayList<>();
     }
 
+    /**
+     * Obtiene una lista de prendas de ropa para niños desde la base de datos (simulación).
+     *
+     * @return Lista de prendas de ropa para niños (simulación).
+     */
     private List<PrendaRopa> obtenerPrendasNinos() {
         // Obtener prendas de la categoría "Niños" de tu base de datos
         // Devuelve una lista vacía como simulación.
         return new ArrayList<>();
     }
 
+    /**
+     * Interfaz de escucha para manejar la carga de prendas.
+     */
     public interface OnPrendasLoadedListener {
+        /**
+         * Se llama cuando se han cargado las prendas.
+         *
+         * @param prendas Lista de DocumentSnapshot que representan las prendas cargadas.
+         */
         void onPrendasLoaded(List<DocumentSnapshot> prendas);
     }
 
