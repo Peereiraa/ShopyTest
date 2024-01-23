@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Imagen de la prenda a la derecha -->
+    <ImageView
+        android:id="@+id/imagePrenda"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/prendas" />
+
+    <!-- Contenedor para el nombre y el precio a la izquierda -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <!-- Nombre de la prenda -->
+        <TextView
+            android:id="@+id/nombrePrenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la prenda"
+            android:textSize="14sp"
+            android:textColor="#000000" />
+
+        <!-- Precio de la prenda -->
+        <TextView
+            android:id="@+id/precioPrenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Precio: $0.00"
+            android:textSize="12sp"
+            android:textColor="#333333" />
+
+        <!-- Botón de eliminar -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Eliminar"
+            android:textColor="#FFFFFF"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

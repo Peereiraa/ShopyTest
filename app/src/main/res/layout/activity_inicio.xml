@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/iniciolayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/logoshopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/image_2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="323dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/logo_default"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/imagenredonde"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/categorias"
+        android:layout_width="22dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/categorias"
+        />
+
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/logoshopy">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+
+    <TextView
+        android:id="@+id/descuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12.79dp"
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dp"
+        android:text="50% de descuento"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/descuento_d"
+        android:gravity="top"
+        />
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/pasarimagenes"
+        android:layout_width="371.3dp"
+        android:layout_height="319.11dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="9.88dp"
+        android:layout_below="@+id/descuento"
+        app:iss_period="1000"
+        app:iss_auto_cycle="true"
+        app:iss_delay="1000"
+        app:iss_corner_radius="20"
+        android:paddingBottom="10dp">
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+
+      <View
+        android:id="@+id/botonMasInformacion"
+        android:layout_width="370.56dp"
+        android:layout_height="48.31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10.85dp"
+        android:layout_below="@id/pasarimagenes"
+        android:background="@drawable/masinformacion"
+        />
+
+    <TextView
+        android:id="@+id/mas_informa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="360dp"
+        android:text="Mas información"
+        android:textAppearance="@style/mas_informa"
+        android:gravity="top"
+        />
+
+            <ImageView
+                android:id="@+id/imagen1"
+                android:layout_width="185dp"
+                android:layout_height="180dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="7dp"
+                android:layout_below="@id/botonMasInformacion"
+                android:src="@drawable/prendas"
+                android:paddingTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/nombreprenda1"
+                android:layout_width="142dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/imagen1"
+                android:text="@string/nombreprenda1"
+                android:fontFamily="@font/intersemibold"
+                android:textAppearance="@style/nombreprenda1"
+                android:gravity="top"
+                />
+
+            <TextView
+                android:id="@+id/precioprenda1"
+                android:layout_width="62dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/nombreprenda1"
+                android:text="@string/precioprenda1"
+                android:textAppearance="@style/precioprenda1"
+                android:fontFamily="@font/intersemibold"
+                android:gravity="top"
+                />
+
+            <ImageView
+                android:id="@+id/imagen2"
+                android:layout_width="185dp"
+                android:layout_height="180dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="198dp"
+                android:layout_below="@id/botonMasInformacion"
+                android:src="@drawable/prendas"
+                android:paddingTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/nombreprenda2"
+                android:layout_width="142dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="206dp"
+                android:layout_below="@+id/imagen1"
+                android:text="@string/nombreprenda1"
+                android:fontFamily="@font/intersemibold"
+                android:textAppearance="@style/nombreprenda1"
+                android:gravity="top"
+                />
+
+            <TextView
+                android:id="@+id/precioprenda2"
+                android:layout_width="62dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="206dp"
+                android:layout_below="@id/nombreprenda1"
+                android:text="@string/precioprenda1"
+                android:textAppearance="@style/precioprenda1"
+                android:fontFamily="@font/intersemibold"
+                android:gravity="top"
+                />
+
+            <TextView
+                android:id="@+id/espacioblanco"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:gravity="top"
+                android:layout_below="@+id/precioprenda1"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/barracategorias"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/frame_19"
+        android:elevation="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:translationZ="10dp">
+
+        <ImageView
+            android:id="@+id/icono_home"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/homeg" />
+
+        <ImageView
+            android:id="@+id/icono_categorias"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/categoryb" />
+
+        <ImageView
+            android:id="@+id/icono_carrito"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/carrito" />
+
+        <ImageView
+            android:id="@+id/icono_perfilbarra"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/profileb" />
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+
+    <ImageView
+        android:id="@+id/volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/volverflecha" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="55dp"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/ralewaybold"
+        android:gravity="center_vertical"
+        android:text="@string/login"
+        android:textAppearance="@style/login" />
+
+    <TextView
+        android:id="@+id/bienvenido_"
+        android:layout_width="277dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/login"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:text="@string/bienvenido_"
+        android:textAppearance="@style/bienvenido_" />
+
+    <EditText
+        android:id="@+id/ponercorreo"
+        android:layout_width="339dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/bienvenido_"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/rectangle_2"
+        android:elevation="2dp"
+        android:hint="@string/correo_elec"
+        android:inputType="textEmailAddress"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
+
+    <!-- ... (código anterior) -->
+
+    <EditText
+        android:id="@+id/ponercontraseña"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ponercorreo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/rectangle_2"
+        android:elevation="2dp"
+        android:hint="Contraseña"
+        android:selectAllOnFocus="true"
+        android:inputType="textPassword"
+        android:maxLength="25"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
+
+    <ImageView
+        android:id="@+id/novercontraseña"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@id/ponercontraseña"
+        android:layout_marginLeft="313dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:onClick="toggleVisibilityVer"
+        android:src="@drawable/esconder" />
+
+
+    <ImageView
+        android:id="@+id/vercontraseña"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="13dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:layout_alignTop="@id/ponercontraseña"
+        android:onClick="toggleVisibilityNoVer"
+        android:layout_marginLeft="313dp"
+
+        android:src="@drawable/ver" />
+
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="339dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/ponercontraseña"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rectangle_3" />
+
+    <TextView
+        android:id="@+id/loginbotontexto"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/rectangle_2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:text="@string/login"
+        android:textAppearance="@style/loginboton" />
+
+    <View
+        android:id="@+id/vector_2"
+        android:layout_width="105dp"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/linea1"
+        />
+    <View
+        android:id="@+id/vector_3"
+        android:layout_width="105dp"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="242dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/linea1"
+        />
+
+    <TextView
+        android:id="@+id/sinologueaste"
+        android:layout_width="95dp"
+        android:layout_height="19dp"
+        android:layout_below="@+id/rectangle_2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:text="@string/si_no_logue"
+        android:textAppearance="@style/sinologueaste" />
+
+    <ImageView
+        android:id="@+id/google_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="562dp"
+        android:src="@drawable/google_logo" />
+
+    <TextView
+        android:id="@+id/google"
+        android:layout_width="54dp"
+        android:layout_height="21dp"
+        android:layout_below="@+id/sinologueaste"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="182dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:text="@string/google"
+        android:textAppearance="@style/google" />
+
+    <TextView
+        android:id="@+id/no_tienes_c"
+        android:layout_width="210dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/google_logo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="89dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+
+        android:gravity="top"
+        android:text="@string/no_tienes_c"
+
+        android:textAppearance="@style/no_tienes_c" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image_2" />
+</RelativeLayout>

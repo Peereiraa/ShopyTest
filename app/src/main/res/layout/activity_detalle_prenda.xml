@@ -1,0 +1,115 @@
+<!-- activity_detalle_prenda.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_6"
+    android:layout_width="390dp"
+    android:layout_height="864dp"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+
+    <TextView
+        android:id="@+id/detalleproducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:text="Detalle del producto"
+        android:fontFamily="@font/intersemibold"
+        android:textAppearance="@style/detalleproducto"
+        android:gravity="top"
+        />
+
+
+    <!-- Título de la prenda en la parte superior -->
+
+
+    <!-- Imagen grande de la prenda con flechas para cambiar el color -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imagenPrenda"
+        android:layout_width="364.74dp"
+        android:layout_height="305.41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="13.14dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100.23dp"
+        app:shapeAppearanceOverlay="@style/redondo"
+        android:layout_below="@+id/detalleproducto"
+
+         />
+
+
+    <TextView
+        android:id="@+id/tituloPrenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="432dp"
+        android:text="Nombre de la ropa"
+        android:layout_below="@+id/imagenPrenda"
+        android:fontFamily="@font/intersemibold"
+        android:textAppearance="@style/nombreropa"
+        android:gravity="top"/>
+
+    <!-- Descripción de la prenda -->
+    <TextView
+        android:id="@+id/descripcionPrenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="19dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="474dp"
+        android:fontFamily="@font/inter"
+        android:layout_below="@+id/tituloPrenda"
+        android:text="Aqui va la descripcion del producto en cuestion"
+        android:textAppearance="@style/descripcionropa"
+        android:gravity="center_vertical"/>
+
+    <!-- Precio de la prenda -->
+    <TextView
+        android:id="@+id/precioPrenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="19dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="577dp"
+        android:text="USD 99$"
+        android:layout_below="@+id/descripcionPrenda"
+        android:fontFamily="@font/intersemibold"
+        android:textAppearance="@style/precioropa"
+        android:gravity="top"/>
+
+    <!-- Botón "Agregar al carrito" -->
+    <View
+        android:id="@+id/agregarcarrito"
+        android:layout_width="277dp"
+        android:layout_height="56dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/precioPrenda"
+        android:background="@drawable/botonanadircarrito"
+        />
+
+    <TextView
+        android:id="@+id/añadircarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="130dp"
+        android:layout_below="@+id/precioPrenda"
+        android:layout_marginTop="40dp"
+        android:text="Añadir a carro"
+        android:fontFamily="@font/inter"
+        android:textAppearance="@style/añadircarrito"
+        android:gravity="top"
+        />
+
+</RelativeLayout>

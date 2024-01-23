@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="login">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="bienvenido_">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#636363</item>
+    </style>
+
+    <style name="correo_elec">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#6F6F6F</item>
+    </style>
+
+    <style name="loginboton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="sinologueaste">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#757171</item>
+    </style>
+
+    <style name="google">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="no_tienes_c">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#636363</item>
+    </style>
+
+    <style name="registrar_c">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="ya_tienes_c">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#636363</item>
+    </style>
+
+    <style name="hombre">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1F9189</item>
+    </style>
+
+    <style name="mujer">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#202020</item>
+    </style>
+
+    <style name="ninos">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#202020</item>
+    </style>
+
+    <style name="hombre2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#202020</item>
+    </style>
+
+    <style name="mujer2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1F9189</item>
+    </style>
+
+    <style name="ninos2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#202020</item>
+    </style>
+
+    <style name="hombre3">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#202020</item>
+    </style>
+
+    <style name="mujer3">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#202020</item>
+    </style>
+
+    <style name="ninos3">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1F9189</item>
+    </style>
+
+    <style name="nombreprenda1">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="precioprenda1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#11655D</item>
+    </style>
+
+    <style name="recordarme">
+        <!-- Puedes personalizar los atributos del texto, como el tamaño, color, etc. según tus preferencias -->
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333333</item>
+        <!-- Agrega más atributos según sea necesario -->
+    </style>
+
+    <style name="descuento_d">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#696969</item>
+    </style>
+
+    <style name="mas_informa">
+        <item name="android:textSize">27sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="tunombre_perfil">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="tu_cuenta">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="mi_perfil">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="mis_compras">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="saldo">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="ajustes">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="detalleproducto">
+        <item name="android:textSize">27sp</item>
+        <item name="android:textColor">#19837B</item>
+    </style>
+
+    <style name="nombreropa">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="descripcionropa">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="precioropa">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#11655D</item>
+    </style>
+
+    <style name="añadircarrito">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="editarPerfilTitulo">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="cambiarfoto">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="nombredeusuario">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="contrasena">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="textoguardardatos">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="imagenredonde">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="titulocarrito">
+        <item name="android:textSize">27sp</item>
+        <item name="android:textColor">#19837B</item>
+    </style>
+
+    <style name="total">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="preciototal">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#11655D</item>
+    </style>
+
+    <style name="nombreprendacarrito">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+    <style name="precioprendacarrito">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#34A19B</item>
+    </style>
+
+    <style name="numerodeprendas">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#202020</item>
+    </style>
+
+    <style name="redondo">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Puedes ajustar este valor según el radio que desees -->
+    </style>
+
+    <style name="pagar">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="nombredeusuarioadmin">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="titulousuarios">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="categoriasropaadmin">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+
+    <!-- strings.xml -->
+    <string name="contrase_a">
+Contrase\u00c3\u00b1a
+</string>
+    <!-- strings.xml -->
+    <string name="mas_informa">
+Mas informaci\u00c3\u00b3n
+</string>
+</resources>

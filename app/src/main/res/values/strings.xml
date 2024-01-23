@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ShopyTest</string>
+    <string name="login">Login</string>
+    <string name="bienvenido_">Bienvenido a ShopyTest, inicia sesion aqui!</string>
+    <string name="correo_elec">Correo electronico</string>
+    <string name="si_no_logue">Si no logueate</string>
+    <string name="google">Google</string>
+    <string name="no_tienes_c">No tienes cuenta? Crea la tuya aqui</string>
+    <string name="registrar_c">Registrar Cuenta</string>
+    <string name="registrar_">Aqui podras registrar tu cuenta</string>
+    <string name="nombreuser">Nombre de usuario</string>
+    <string name="register">Registrar</string>
+    <string name="siyatienescuenta">Si no registrate</string>
+    <string name="ya_tienes_c">Ya tienes cuenta? Logueate aqui</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="ninos">Niños</string>
+    <string name="nombreprenda1">Zapatos Nike</string>
+    <string name="precioprenda1">54,99 €</string>
+    <string name="nombreprenda2">Pantalones Nike</string>
+    <string name="precioprenda2">55,99 €</string>
+    <string name="nombreprenda3">Camiseta Nike</string>
+    <string name="precioprenda3">56,99 €</string>
+    <string name="default_web_client_id">455703258124-7djnab21ulvk8g9v2tfm3hblp9f5u0us.apps.googleusercontent.com</string>
+    <string name="title_activity_menu_pantalla_admin">MenuPantallaAdmin</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Prendas</string>
+    <string name="menu_slideshow">Usuarios</string>
+</resources>

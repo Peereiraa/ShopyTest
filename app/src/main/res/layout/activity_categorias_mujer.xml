@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/logoshopy"
+        android:layout_width="263dp"
+        android:layout_height="81dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/image_2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="323dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="31dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/imagenredonde"
+        android:background="@drawable/logo_default"
+        />
+
+    <ImageView
+        android:id="@+id/categorias"
+        android:layout_width="22dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/categorias"
+        />
+
+    <View
+        android:id="@+id/rectangle_7"
+        android:layout_width="391dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="103dp"
+        android:background="@drawable/rectangle_7" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frame_20"
+        android:layout_width="369dp"
+        android:layout_height="27dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="117dp"
+        android:clipToOutline="true">
+
+        <TextView
+            android:id="@+id/hombre"
+            android:layout_width="71dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="42dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/hombre"
+            android:textAppearance="@style/hombre2"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            />
+
+        <TextView
+            android:id="@+id/mujer"
+            android:layout_width="52dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/mujer"
+            android:textAppearance="@style/mujer2"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            />
+
+        <TextView
+            android:id="@+id/ninos"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="269dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/ninos"
+            android:textAppearance="@style/ninos2"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/rectangle_7" />
+
+
+            <!-- Espacio con la barra -->
+            <RelativeLayout
+                android:paddingBottom="55dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2">
+
+                <TextView
+                    android:id="@+id/espacioblanco"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Repite esta estructura para más prendas -->
+
+    <View
+        android:id="@+id/barracategorias"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/frame_19"
+        android:elevation="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:translationZ="10dp">
+
+        <ImageView
+            android:id="@+id/icono_home"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/icono_categorias"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/category" />
+
+        <ImageView
+            android:id="@+id/icono_carrito"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/carrito" />
+
+        <ImageView
+            android:id="@+id/icono_perfilbarra"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/profileb" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

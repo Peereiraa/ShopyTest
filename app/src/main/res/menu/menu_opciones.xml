@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/opcion1"
+        android:title="Crear usuario"/>
+    <item
+        android:id="@+id/opcion2"
+        android:title="Modificar usuario"/>
+</menu>

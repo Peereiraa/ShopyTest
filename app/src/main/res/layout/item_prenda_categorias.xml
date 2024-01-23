@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/prenda"
+            android:layout_width="185dp"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/redondo"
+            android:src="@drawable/prendas" />
+
+        <TextView
+            android:id="@+id/nombreprenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prenda"
+            android:text="@string/nombreprenda1"
+            android:fontFamily="@font/intersemibold"
+            android:textAppearance="@style/nombreprenda1"
+            android:gravity="top"
+            />
+
+        <TextView
+            android:id="@+id/precioprenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombreprenda"
+            android:text="@string/precioprenda1"
+            android:textAppearance="@style/precioprenda1"
+            android:fontFamily="@font/intersemibold"
+            android:gravity="top"
+            />
+
+
+    </RelativeLayout>

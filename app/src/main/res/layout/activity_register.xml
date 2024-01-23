@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+
+    <TextView
+        android:id="@+id/registertexto"
+        android:layout_width="194dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/ralewaybold"
+        android:gravity="center_vertical"
+        android:text="@string/registrar_c"
+        android:textAppearance="@style/registrar_c"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="8dp" />
+
+    <TextView
+        android:id="@+id/bienvenido_register"
+        android:layout_width="277dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="128dp"
+        android:text="@string/registrar_"
+        android:textAppearance="@style/bienvenido_"
+        android:gravity="top"
+        android:fontFamily="@font/poppins"
+        />
+
+    <EditText
+        android:id="@+id/nombreusuario"
+        android:layout_width="339dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="185dp"
+        android:background="@drawable/rectangle_2"
+        android:elevation="2dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:inputType="text"
+        android:hint="@string/nombreuser"
+         />
+
+    <EditText
+        android:id="@+id/correoelectronico"
+        android:layout_width="339dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="249dp"
+        android:background="@drawable/rectangle_2"
+        android:elevation="2dp"
+        android:hint="@string/correo_elec"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/contraseña"
+        android:layout_width="272dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="317dp"
+        android:background="@drawable/rectangle_2"
+        android:elevation="2dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/repetircontraseña"
+        android:layout_width="272dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="389dp"
+        android:background="@drawable/rectangle_2"
+        android:elevation="2dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:hint="Repetir Contraseña"
+        android:inputType="textPassword"/>
+
+    <ImageView
+        android:id="@+id/novercontraseña2"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@id/repetircontraseña"
+        android:layout_marginLeft="313dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:onClick="toggleVisibilityVer"
+        android:src="@drawable/esconder" />
+
+    <ImageView
+        android:id="@+id/vercontraseña2"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="13dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:layout_alignTop="@id/repetircontraseña"
+        android:onClick="toggleVisibilityNoVer"
+        android:layout_marginLeft="313dp"
+
+        android:src="@drawable/ver" />
+
+
+    <ImageView
+        android:id="@+id/novercontraseña1"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@id/contraseña"
+        android:layout_marginLeft="313dp"
+        android:layout_marginTop="11dp"
+        android:clickable="true"
+        android:onClick="toggleVisibilityNoVer"
+        android:src="@drawable/esconder" />
+
+    <ImageView
+        android:id="@+id/vercontraseña1"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="13dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:layout_alignTop="@id/contraseña"
+        android:onClick="toggleVisibilityNoVer"
+        android:layout_marginLeft="313dp"
+
+        android:src="@drawable/ver" />
+
+    <View
+        android:id="@+id/botonregistrar"
+        android:layout_width="339dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="464dp"
+        android:background="@drawable/rectangle_3"
+        />
+
+    <TextView
+        android:id="@+id/registerbotontexto"
+        android:layout_width="95dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="481dp"
+        android:text="@string/register"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/loginboton"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/ya_tienes_c"
+        android:layout_width="210dp"
+        android:layout_height="19dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="105dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="640dp"
+        android:text="@string/ya_tienes_c"
+        android:fontFamily="@font/poppins"
+
+        android:textAppearance="@style/ya_tienes_c"
+        android:gravity="top"
+
+        />
+
+</RelativeLayout>
+
+
+

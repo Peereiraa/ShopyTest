@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="20dp">
+
+    <!-- Agrega tus Views aquí (ImageView, TextViews, etc.) -->
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/prenda"
+        android:layout_width="346.93dp"
+        android:layout_height="275.13dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/redondo"/>
+
+    <ImageView
+        android:id="@+id/eliminarprenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="320dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/eliminarprenda"
+        android:clickable="true"
+
+        />
+
+    <TextView
+        android:id="@+id/nombreprendacarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prenda"
+        android:layout_marginTop="16dp"
+        android:text="Pantalones Nike"
+        android:fontFamily="@font/intersemibold"
+        android:textAppearance="@style/nombreprendacarrito"/>
+
+    <TextView
+        android:id="@+id/precioprendacarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombreprendacarrito"
+        android:layout_marginTop="8dp"
+        android:text="USD 78$"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/precioprendacarrito"/>
+
+    <View
+        android:id="@+id/lineaseparadora"
+        android:layout_width="341dp"
+        android:layout_height="6dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/precioprendacarrito"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/lineaespaciadora"
+        />
+
+    <ImageView
+        android:id="@+id/restarprecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="330dp"
+        android:src="@drawable/restar"
+        />
+
+    <TextView
+        android:id="@+id/numerodeprendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="300dp"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/numerodeprendas"
+        android:text="1"
+        android:layout_marginTop="328dp"
+        />
+
+    <ImageView
+        android:id="@+id/sumarprecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="330dp"
+        android:src="@drawable/sumar"
+        />
+
+
+</RelativeLayout>

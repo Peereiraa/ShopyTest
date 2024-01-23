@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+
+    <View
+        android:id="@+id/fondoperfil"
+        android:layout_width="match_parent"
+        android:layout_height="346dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#19837B"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fotoperfil"
+        android:layout_width="123.57dp"
+        android:layout_height="123.38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="81dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/asd"
+        app:shapeAppearanceOverlay="@style/imagenredonde"
+        />
+
+    <TextView
+        android:id="@+id/tu_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="215dp"
+        android:layout_below="@+id/fotoperfil"
+        android:text="Tu nombre"
+        android:textAppearance="@style/tunombre_perfil"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/tu_cuenta"
+        android:layout_width="182.52dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="357dp"
+        android:text="Tu cuenta"
+        android:layout_below="@id/fondoperfil"
+        android:fontFamily="@font/intersemibold"
+        android:textAppearance="@style/tu_cuenta"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/mi_perfil"
+        android:layout_below="@+id/tu_cuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="74.11dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="436dp"
+        android:text="Mi Perfil"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/mi_perfil"
+        android:gravity="top"
+        />
+
+    <ImageView
+        android:id="@+id/icono_perfil"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/mi_perfil"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/icono_perfil_ir"
+        android:layout_width="28.67dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/mi_perfil"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/arrow" />
+
+
+    <TextView
+        android:id="@+id/mis_compras"
+        android:layout_below="@+id/mi_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="75.07dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="494dp"
+        android:text="Mis compras"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/mis_compras"
+        android:gravity="top"
+        />
+
+    <ImageView
+        android:id="@+id/icono_compras"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/mis_compras"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/folder" />
+
+    <ImageView
+        android:id="@+id/icono_compras_ir"
+        android:layout_width="28.67dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/mis_compras"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/saldo"
+        android:layout_below="@+id/mis_compras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="76.02dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="558dp"
+        android:text="Saldo"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/saldo"
+        android:gravity="top"
+        />
+
+    <ImageView
+        android:id="@+id/icono_saldo"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/saldo"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/wallet" />
+
+    <ImageView
+        android:id="@+id/icono_saldo_ir"
+        android:layout_width="28.67dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/saldo"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/arrow" />
+
+
+    <View
+        android:id="@+id/barracategorias"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/frame_19"
+        android:elevation="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:translationZ="10dp">
+
+        <ImageView
+            android:id="@+id/icono_home"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/icono_categorias"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/categoryb" />
+
+        <ImageView
+            android:id="@+id/icono_carrito"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/carrito" />
+
+        <ImageView
+            android:id="@+id/icono_perfilbarra"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/profile" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="245dp"
+        android:focusable="true"
+        android:padding="8dp"/>
+
+    <ImageView
+        android:id="@+id/imageCerrarSesion"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_alignTop="@id/textCerrarSesion"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="365dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/cerrarsesion"/>
+
+
+
+
+</RelativeLayout>

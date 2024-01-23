@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_8"
+    android:layout_width="390dp"
+    android:layout_height="864dp"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/intersemibold"
+        android:text="Cesta de Compra"
+        android:textAppearance="@style/titulocarrito"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/intersemibold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="19dp"
+        android:layout_below="@+id/titulo"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="94dp"
+        android:text="Total"
+        android:textAppearance="@style/total"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/preciototal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="86dp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:layout_below="@+id/titulo"
+        android:text="USD 200$"
+        android:textAppearance="@style/preciototal"
+        android:gravity="top"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@id/preciototal"
+        android:layout_marginBottom="16dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/preciototal"
+            android:layout_marginTop="10dp"
+           />
+
+
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/botonpagar"
+        android:layout_width="277dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/botonpagar"
+        />
+
+    <TextView
+        android:id="@+id/pagar"
+        android:layout_width="62dp"
+        android:layout_height="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="610dp"
+        android:text="Pagar"
+        android:fontFamily="@font/intersemibold"
+        android:textAppearance="@style/pagar"
+        android:gravity="top"
+        />
+
+
+    <View
+        android:id="@+id/barracategorias"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/frame_19"
+        android:elevation="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:translationZ="10dp">
+
+        <ImageView
+            android:id="@+id/icono_home"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/icono_categorias"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/categoryb" />
+
+        <ImageView
+            android:id="@+id/icono_carrito"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/mochilaverde" />
+
+        <ImageView
+            android:id="@+id/icono_perfilbarra"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/profileb" />
+    </LinearLayout>
+
+
+</RelativeLayout>

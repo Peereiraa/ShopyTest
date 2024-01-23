@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/categoriaslayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/logoshopy"
+        android:layout_width="263dp"
+        android:layout_height="81dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/image_2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="323dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="31dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/imagenredonde"
+        android:background="@drawable/logo_default"
+        />
+
+    <ImageView
+        android:id="@+id/categorias"
+        android:layout_width="22dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/categorias"
+        />
+
+    <View
+        android:id="@+id/rectangle_7"
+        android:layout_width="391dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="103dp"
+        android:background="@drawable/rectangle_7" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frame_20"
+        android:layout_width="369dp"
+        android:layout_height="27dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="117dp"
+        android:clipToOutline="true">
+
+        <TextView
+            android:id="@+id/hombre"
+            android:layout_width="71dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="42dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/hombre"
+            android:textAppearance="@style/hombre"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            />
+
+        <TextView
+            android:id="@+id/mujer"
+            android:layout_width="52dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/mujer"
+            android:textAppearance="@style/mujer"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            />
+
+        <TextView
+            android:id="@+id/ninos"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="269dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/ninos"
+            android:textAppearance="@style/ninos"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rectangle_7">
+
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rectangle_7"
+            android:columnCount="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp">
+
+            <!-- Prenda 1 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/prenda1"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda1"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda1"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda1"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda1"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <!-- Prenda 2 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <ImageView
+                    android:id="@+id/prenda2"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda2"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda2"
+                    android:text="@string/nombreprenda2"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda2"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda2"
+                    android:text="@string/precioprenda2"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Prenda 3 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/prenda3"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda3"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda3"
+                    android:text="@string/nombreprenda3"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda3"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda3"
+                    android:text="@string/precioprenda3"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Prenda 4 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <ImageView
+                    android:id="@+id/prenda4"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda4"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda4"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda4"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda4"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Prenda 5 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/prenda5"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda5"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda5"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda5"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda5"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Prenda 6 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <ImageView
+                    android:id="@+id/prenda6"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda6"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda6"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda6"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda6"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Prenda 7 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/prenda7"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda7"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda7"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda7"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda7"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Prenda 8 -->
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <ImageView
+                    android:id="@+id/prenda8"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda8"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda8"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda8"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda8"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+
+            <!-- Prenda 9 -->
+            <RelativeLayout
+                android:paddingBottom="20dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/prenda9"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda9"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda9"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda9"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda9"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Prenda 10 -->
+            <RelativeLayout
+                android:paddingBottom="20dp"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <ImageView
+                    android:id="@+id/prenda10"
+                    android:layout_width="185dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/prendas" />
+
+                <TextView
+                    android:id="@+id/nombreprenda10"
+                    android:layout_width="142dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/prenda10"
+                    android:text="@string/nombreprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:textAppearance="@style/nombreprenda1"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/precioprenda10"
+                    android:layout_width="62dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/nombreprenda10"
+                    android:text="@string/precioprenda1"
+                    android:textAppearance="@style/precioprenda1"
+                    android:fontFamily="@font/intersemibold"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+
+            <!-- Espacio con la barra -->
+            <RelativeLayout
+                android:paddingBottom="55dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2">
+
+                <TextView
+                    android:id="@+id/espacioblanco"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    />
+            </RelativeLayout>
+
+            <!-- Repite esta estructura para más prendas -->
+
+        </GridLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/barracategorias"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/frame_19"
+        android:elevation="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:translationZ="10dp">
+
+        <ImageView
+            android:id="@+id/icono_home"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/icono_categorias"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/category" />
+
+        <ImageView
+            android:id="@+id/icono_carrito"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/carrito" />
+
+        <ImageView
+            android:id="@+id/icono_perfilbarra"
+            android:layout_width="25.45dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/profileb" />
+    </LinearLayout>
+
+
+
+
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+
+
+</RelativeLayout>

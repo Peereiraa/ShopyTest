@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pantallamiperfil"
+    android:layout_width="wrap_content"
+    android:layout_height="864dp"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+
+    <View
+        android:id="@+id/fondoverde"
+        android:layout_width="wrap_content"
+        android:layout_height="188dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#1C756C" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="85dp"
+        android:text="Panel de Administrador"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/editarPerfilTitulo"
+        android:gravity="top"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fotoperfil"
+        android:layout_width="122dp"
+        android:layout_height="122dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/titulo"
+        android:layout_marginTop="127dp"
+        android:src="@drawable/mondongo"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/imagenredonde"
+        />
+
+    <TextView
+        android:id="@+id/nombredeadmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/fotoperfil"
+        android:text="Bienvenido"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/nombredeusuarioadmin"
+        android:gravity="top"
+
+        />
+
+    <View
+        android:id="@+id/crearprenda"
+        android:layout_width="283dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/nombredeadmin"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="55dp"
+        android:background="@drawable/guardardatos"
+        android:layout_marginTop="60dp"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/crearprendatexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Crear prenda de ropa"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="117dp"
+        android:layout_below="@+id/crearprenda"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="365dp"
+        android:textAppearance="@style/textoguardardatos"
+        android:gravity="top"
+        />
+
+    <View
+        android:id="@+id/modificarprenda"
+        android:layout_width="283dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/crearprenda"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="55dp"
+        android:background="@drawable/guardardatos"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/modificarprendatexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Modificar prenda de ropa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/modificarprenda"
+        android:layout_marginTop="437dp"
+        android:textAppearance="@style/textoguardardatos"
+        android:gravity="top"
+        />
+
+    <View
+        android:id="@+id/borrarprenda"
+        android:layout_width="283dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/modificarprenda"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="55dp"
+        android:background="@drawable/guardardatos"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/borrarprendatexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Eliminar prenda de ropa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="110dp"
+        android:layout_below="@+id/borrarprenda"
+        android:layout_marginTop="505dp"
+        android:textAppearance="@style/textoguardardatos"
+        android:gravity="top"
+        />
+
+    <View
+        android:id="@+id/gestionarusuarios"
+        android:layout_width="283dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/borrarprenda"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="55dp"
+        android:background="@drawable/guardardatos"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/gestionarusuariostexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Ver usuarios"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/modificarprenda"
+        android:layout_marginTop="576dp"
+        android:textAppearance="@style/textoguardardatos"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/textCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="245dp"
+        android:focusable="true"
+        android:padding="8dp"/>
+
+    <ImageView
+        android:id="@+id/imageCerrarSesion"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_alignTop="@id/textCerrarSesion"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="365dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/cerrarsesion"/>
+
+</RelativeLayout>

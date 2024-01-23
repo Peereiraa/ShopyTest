@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="41dp"
+    android:viewportWidth="40"
+    android:viewportHeight="41">
+
+  <!-- Círculo rojo -->
+  <path
+      android:pathData="M0.487,20.44a19.639,19.814 0,1 0,39.278 0a19.639,19.814 0,1 0,-39.278 0z"
+      android:fillColor="#F45353"/>
+
+  <!-- Línea en forma de "x" -->
+  <path
+      android:pathData="M10,10L30,30"
+      android:strokeColor="#000000"
+      android:strokeWidth="2"/>
+
+  <!-- Otra línea en forma de "x" -->
+  <path
+      android:pathData="M30,10L10,30"
+      android:strokeColor="#000000"
+      android:strokeWidth="2"/>
+</vector>

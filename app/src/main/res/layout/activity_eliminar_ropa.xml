@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pantallamiperfil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <View
+        android:id="@+id/fondoverde"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#1C756C" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="Eliminar prendas de ropa"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/titulousuarios"
+        android:gravity="top" />
+
+    <CheckBox
+        android:id="@+id/checkhombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hombres"
+        android:layout_below="@id/fondoverde"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp">
+
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/checkmujer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mujer"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fondoverde"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp">
+
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/checkniño"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niños"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/fondoverde"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp">
+
+    </CheckBox>
+
+    <TextView
+        android:id="@+id/titulohombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:layout_below="@id/checkhombre"
+        android:text="Hombre"
+        android:background="@color/grey_font"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/categoriasropaadmin"
+        android:gravity="top" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHombre"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/titulohombre"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/titulomujer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:layout_below="@id/recyclerViewHombre"
+        android:text="Mujer"
+        android:background="@color/grey_font"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/categoriasropaadmin"
+        android:gravity="top" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMujer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/titulomujer"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/tituloninos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:layout_below="@id/recyclerViewMujer"
+        android:text="Niños"
+        android:background="@color/grey_font"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/categoriasropaadmin"
+        android:gravity="top" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNinos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tituloninos"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:clipToPadding="false" />
+
+</RelativeLayout>
