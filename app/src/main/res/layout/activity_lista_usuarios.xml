@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
-        android:text="Lista de Usuarios"
+        android:text="@string/titulolistausuariosadmin"
         android:fontFamily="@font/poppins"
         android:textAppearance="@style/titulousuarios"
         android:gravity="top"

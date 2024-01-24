@@ -12,7 +12,7 @@
             android:id="@+id/editTextNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre"/>
+            android:hint="@string/nombreadmincrearprenda"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -22,7 +22,7 @@
             android:id="@+id/editTextPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Precio"
+            android:hint="@string/precioadmincrearprenda"
             android:layout_marginTop="16dp"
             android:inputType="numberDecimal"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -35,7 +35,7 @@
             android:id="@+id/editTextDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descripcion"
+            android:hint="@string/descripcionadmincrearprenda"
             android:layout_marginTop="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Tiene Rebaja"/>
+        android:text="@string/tienerebajaadmincrearprenda"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -58,7 +58,7 @@
             android:id="@+id/editTextRebaja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Rebaja"
+            android:hint="@string/rebajaadmincrearprenda"
             android:visibility="invisible"
             android:layout_marginTop="16dp"
             android:inputType="numberDecimal"/>
@@ -91,11 +91,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Cargar Imagen"/>
+        android:text="@string/botoncargarimagenadmincrearprenda"/>
 
     <Button
         android:id="@+id/btnGuardarCambios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar Cambios"/>
+        android:text="@string/botonguardarcambiosadmincrearprenda"/>
 </LinearLayout>

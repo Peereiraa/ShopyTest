@@ -67,7 +67,7 @@
         android:layout_marginLeft="12.79dp"
         android:layout_alignParentTop="true"
         android:paddingTop="10dp"
-        android:text="50% de descuento"
+        android:text="@string/prendascondescuentoinicio"
         android:fontFamily="@font/poppins"
         android:textAppearance="@style/descuento_d"
         android:gravity="top"
@@ -107,7 +107,7 @@
         android:layout_marginLeft="95dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="360dp"
-        android:text="Mas información"
+        android:text="@string/botonmasinformaciontextoinicio"
         android:textAppearance="@style/mas_informa"
         android:gravity="top"
         />

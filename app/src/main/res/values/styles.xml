@@ -259,11 +259,11 @@
 
 
     <!-- strings.xml -->
-    <string name="contrase_a">
+    <string name="contrase_a" translatable="false">
 Contrase\u00c3\u00b1a
 </string>
     <!-- strings.xml -->
-    <string name="mas_informa">
+    <string name="mas_informa" translatable="false">
 Mas informaci\u00c3\u00b3n
 </string>
 </resources>

@@ -28,7 +28,7 @@
             android:id="@+id/nombrePrenda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre de la prenda"
+            android:text="@string/nombredelaprendadetalle"
             android:textSize="14sp"
             android:textColor="#000000" />
 
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Precio: $0.00"
+            android:text="@string/preciodelaprendadetalle"
             android:textSize="12sp"
             android:textColor="#333333" />
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Eliminar"
+            android:text="@string/botoneliminarprendaroparecicleview"
             android:textColor="#FFFFFF"
             />
 

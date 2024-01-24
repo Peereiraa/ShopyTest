@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/prenda"
         android:layout_marginTop="16dp"
-        android:text="Pantalones Nike"
+        android:text="@string/nombredelaprendadetalle"
         android:fontFamily="@font/intersemibold"
         android:textAppearance="@style/nombreprendacarrito"/>
 
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/nombreprendacarrito"
         android:layout_marginTop="8dp"
-        android:text="USD 78$"
+        android:text="@string/preciodelaprendadetalle"
         android:textStyle="bold"
         android:fontFamily="@font/poppins"
         android:textAppearance="@style/precioprendacarrito"/>

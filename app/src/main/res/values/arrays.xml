@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="genero_array">
-        <item>Hombre</item>
-        <item>Mujer</item>
-        <item>Niño</item>
+        <item>@string/hombre</item>
+        <item>@string/mujer</item>
+        <item>@string/ninos</item>
     </string-array>
 </resources>

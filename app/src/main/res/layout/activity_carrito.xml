@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/intersemibold"
-        android:text="Cesta de Compra"
+        android:text="@string/cestadecompratitulocarrito"
         android:textAppearance="@style/titulocarrito"
         android:gravity="top"
         />
@@ -31,7 +31,7 @@
         android:layout_below="@+id/titulo"
         android:layout_alignParentTop="true"
         android:layout_marginTop="94dp"
-        android:text="Total"
+        android:text="@string/totaltextocarrito"
         android:textAppearance="@style/total"
         android:gravity="top"
         />
@@ -47,7 +47,7 @@
         android:fontFamily="@font/poppins"
         android:textStyle="bold"
         android:layout_below="@+id/titulo"
-        android:text="USD 200$"
+        android:text="@string/cestadecomprapreciototalcarrito"
         android:textAppearance="@style/preciototal"
         android:gravity="top"
         />
@@ -88,7 +88,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="610dp"
-        android:text="Pagar"
+        android:text="@string/botonpagartextocarrito"
         android:fontFamily="@font/intersemibold"
         android:textAppearance="@style/pagar"
         android:gravity="top"

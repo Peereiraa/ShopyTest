@@ -4,11 +4,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
@@ -18,10 +20,16 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.shopytest.administrador.MenuPantallaAdminActivity;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.UserInfo;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -58,6 +66,8 @@ public class Inicio extends AppCompatActivity {
     /** Instancia de FirebaseAuth para la autenticación de Firebase. */
     private FirebaseAuth mAuth;
 
+    private FirebaseFirestore db;
+
     /**
      * Método llamado cuando la actividad se está creando.
      *
@@ -72,17 +82,11 @@ public class Inicio extends AppCompatActivity {
         fotodeperfil = findViewById(R.id.logo);
         ImageSlider imageSlider = findViewById(R.id.pasarimagenes);
 
-        ArrayList<SlideModel> slideModels = new ArrayList<>();
-
-        slideModels.add(new SlideModel(R.drawable.fotoinicio1, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.fotoinicio1, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.fotoinicio1, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.fotoinicio1, ScaleTypes.FIT));
 
 
-        imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         cargarImagenPerfil();
 
@@ -91,6 +95,38 @@ public class Inicio extends AppCompatActivity {
         iconoCategorias = findViewById(R.id.icono_categorias);
         iconoCarrito = findViewById(R.id.icono_carrito);
         iconoPerfil = findViewById(R.id.icono_perfilbarra);
+
+        CollectionReference prendasRef = db.collection("PrendasRopa");
+
+        prendasRef.whereGreaterThan("Rebaja", 0).get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        // Itera sobre los documentos y agrega las imágenes al carrusel
+                        ArrayList<SlideModel> slideModels = new ArrayList<>();
+                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                            // Verifica si el campo "imageUrl" existe y no es nulo
+                            if (document.contains("imageUrl")) {
+                                String imageUrl = document.getString("imageUrl");
+                                if (imageUrl != null) {
+                                    slideModels.add(new SlideModel(imageUrl, ScaleTypes.FIT));
+                                }
+                            }
+                        }
+
+                        // Establece las imágenes en el carrusel
+                        imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Maneja el caso en el que no se puedan recuperar las prendas de Firestore
+                        Toast.makeText(Inicio.this, "Error al cargar las prendas desde Firestore: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        e.printStackTrace(); // Imprime el error en la consola para facilitar la depuración
+                    }
+                });
+
 
         // Configuración de clics en vistas
         iconoCategorias.setOnClickListener(new View.OnClickListener() {

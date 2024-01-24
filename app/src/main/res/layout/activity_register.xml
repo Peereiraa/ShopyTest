@@ -39,12 +39,12 @@
 
     <EditText
         android:id="@+id/nombreusuario"
-        android:layout_width="339dp"
-        android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="24dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="185dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/bienvenido_register"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rectangle_2"
         android:elevation="2dp"
         android:paddingStart="8dp"
@@ -55,12 +55,12 @@
 
     <EditText
         android:id="@+id/correoelectronico"
-        android:layout_width="339dp"
-        android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="249dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/nombreusuario"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rectangle_2"
         android:elevation="2dp"
         android:hint="@string/correo_elec"
@@ -70,32 +70,32 @@
 
     <EditText
         android:id="@+id/contraseña"
-        android:layout_width="272dp"
-        android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="24dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="317dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/correoelectronico"
         android:background="@drawable/rectangle_2"
         android:elevation="2dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:hint="Contraseña"
+        android:hint="@string/contraseñaregister"
         android:inputType="textPassword"/>
 
     <EditText
         android:id="@+id/repetircontraseña"
-        android:layout_width="272dp"
-        android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="24dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="389dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/contraseña"
         android:background="@drawable/rectangle_2"
         android:elevation="2dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:hint="Repetir Contraseña"
+        android:hint="@string/repetircontraseñaregister"
         android:inputType="textPassword"/>
 
     <ImageView
@@ -103,8 +103,8 @@
         android:layout_width="34dp"
         android:layout_height="32dp"
         android:layout_alignTop="@id/repetircontraseña"
-        android:layout_marginLeft="313dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="10dp"
         android:clickable="true"
         android:onClick="toggleVisibilityVer"
         android:src="@drawable/esconder" />
@@ -113,12 +113,12 @@
         android:id="@+id/vercontraseña2"
         android:layout_width="34dp"
         android:layout_height="32dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="10dp"
         android:clickable="true"
         android:visibility="invisible"
         android:layout_alignTop="@id/repetircontraseña"
         android:onClick="toggleVisibilityNoVer"
-        android:layout_marginLeft="313dp"
+        android:layout_marginLeft="330dp"
 
         android:src="@drawable/ver" />
 
@@ -128,8 +128,8 @@
         android:layout_width="34dp"
         android:layout_height="32dp"
         android:layout_alignTop="@id/contraseña"
-        android:layout_marginLeft="313dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="10dp"
         android:clickable="true"
         android:onClick="toggleVisibilityNoVer"
         android:src="@drawable/esconder" />
@@ -138,55 +138,47 @@
         android:id="@+id/vercontraseña1"
         android:layout_width="34dp"
         android:layout_height="32dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="10dp"
         android:clickable="true"
         android:visibility="invisible"
         android:layout_alignTop="@id/contraseña"
         android:onClick="toggleVisibilityNoVer"
-        android:layout_marginLeft="313dp"
-
+        android:layout_marginLeft="330dp"
         android:src="@drawable/ver" />
 
     <View
         android:id="@+id/botonregistrar"
         android:layout_width="339dp"
         android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="24dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="464dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/repetircontraseña"
         android:background="@drawable/rectangle_3"
         />
 
     <TextView
         android:id="@+id/registerbotontexto"
-        android:layout_width="95dp"
-        android:layout_height="25dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="481dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/repetircontraseña"
+        android:layout_marginTop="55dp"
         android:text="@string/register"
         android:fontFamily="@font/poppins"
         android:textAppearance="@style/loginboton"
-        android:gravity="center"
         />
 
     <TextView
         android:id="@+id/ya_tienes_c"
-        android:layout_width="210dp"
-        android:layout_height="19dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="105dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="640dp"
-        android:text="@string/ya_tienes_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppins"
-
-        android:textAppearance="@style/ya_tienes_c"
         android:gravity="top"
-
-        />
+        android:text="@string/ya_tienes_c"
+        android:textAppearance="@style/ya_tienes_c" />
 
 </RelativeLayout>
 
