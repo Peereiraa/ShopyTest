@@ -1,4 +1,4 @@
-package com.example.shopytest;
+package com.example.shopytest.aplicacion.carga;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.shopytest.R;
 import com.example.shopytest.administrador.MenuPantallaAdminActivity;
+import com.example.shopytest.aplicacion.Inicio;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

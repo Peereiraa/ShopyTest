@@ -33,16 +33,16 @@
             android:name=".profile.MiPerfil"
             android:exported="false" />
         <activity
-            android:name=".DetallePrendaActivity"
+            android:name=".aplicacion.DetallePrendaActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoriasNinos"
+            android:name=".aplicacion.CategoriasNinos"
             android:exported="false" />
         <activity
-            android:name=".CategoriasMujer"
+            android:name=".aplicacion.CategoriasMujer"
             android:exported="false" />
         <activity
-            android:name=".PantallaDeCarga"
+            android:name=".aplicacion.carga.PantallaDeCarga"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,22 +51,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Perfil"
+            android:name=".aplicacion.Perfil"
             android:exported="false" />
         <activity
-            android:name=".Carrito"
+            android:name=".aplicacion.Carrito"
             android:exported="false" />
         <activity
-            android:name=".Inicio"
+            android:name=".aplicacion.Inicio"
             android:exported="true" />
         <activity
-            android:name=".Categorias"
+            android:name=".aplicacion.Categorias"
             android:exported="true" />
         <activity
-            android:name=".Register"
+            android:name=".aplicacion.identificacion.Register"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".aplicacion.identificacion.Login"
             android:exported="true" />
     </application>
 

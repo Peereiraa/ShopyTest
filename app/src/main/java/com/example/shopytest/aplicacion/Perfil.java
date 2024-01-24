@@ -1,4 +1,4 @@
-package com.example.shopytest;
+package com.example.shopytest.aplicacion;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.shopytest.aplicacion.identificacion.Login;
+import com.example.shopytest.R;
 import com.example.shopytest.profile.MiPerfil;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -54,9 +56,6 @@ public class Perfil extends AppCompatActivity {
     /** ImageView para navegar a la pantalla de perfil del usuario. */
     private ImageView miPerfil;
 
-    /** TextView para realizar la acción de cerrar sesión. */
-    private TextView textCerrarSesion;
-
     /** ImageView para realizar la acción de cerrar sesión. */
     private ImageView imageCerrarSesion;
 
@@ -79,7 +78,6 @@ public class Perfil extends AppCompatActivity {
         iconoInicio = findViewById(R.id.icono_home);
         iconoCarrito = findViewById(R.id.icono_carrito);
         iconoCategorias = findViewById(R.id.icono_categorias);
-        textCerrarSesion = findViewById(R.id.textCerrarSesion);
         imageCerrarSesion = findViewById(R.id.imageCerrarSesion);
 
 
@@ -118,13 +116,6 @@ public class Perfil extends AppCompatActivity {
             }
         });
 
-        textCerrarSesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mostrarAlertaCerrarSesion();
-
-            }
-        });
 
         imageCerrarSesion.setOnClickListener(new View.OnClickListener() {
             @Override

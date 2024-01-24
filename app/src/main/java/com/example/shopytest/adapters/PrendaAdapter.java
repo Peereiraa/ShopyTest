@@ -1,4 +1,4 @@
-package com.example.shopytest.prendas;
+package com.example.shopytest.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;

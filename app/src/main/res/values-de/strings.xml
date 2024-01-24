@@ -81,4 +81,5 @@
     <string name="categoras">Kategorien</string>
     <string name="carrito">Warenkorb</string>
     <string name="perfil">Profil</string>
+    <string name="cargando">Laden...</string>
 </resources>

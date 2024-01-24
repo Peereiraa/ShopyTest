@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PantallaDeCarga"
+    tools:context=".aplicacion.carga.PantallaDeCarga"
     android:background="#FFFFFF">
 
     <!-- ImageView -->
@@ -33,6 +33,6 @@
         android:layout_below="@id/progressBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:text="Cargando..."
+        android:text="@string/cargando"
         android:visibility="gone" />
 </RelativeLayout>

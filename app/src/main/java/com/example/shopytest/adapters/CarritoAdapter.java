@@ -1,4 +1,4 @@
-    package com.example.shopytest;
+    package com.example.shopytest.adapters;
 
     import android.view.LayoutInflater;
     import android.view.View;
@@ -10,6 +10,8 @@
     import androidx.recyclerview.widget.RecyclerView;
 
     import com.bumptech.glide.Glide;
+    import com.example.shopytest.R;
+    import com.example.shopytest.aplicacion.Carrito;
     import com.google.android.gms.tasks.OnFailureListener;
     import com.google.android.gms.tasks.OnSuccessListener;
     import com.google.firebase.auth.FirebaseAuth;

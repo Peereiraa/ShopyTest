@@ -81,4 +81,5 @@
     <string name="categoras">Categorie</string>
     <string name="carrito">Carrello</string>
     <string name="perfil">Profilo</string>
+    <string name="cargando">Caricamento...</string>
 </resources>

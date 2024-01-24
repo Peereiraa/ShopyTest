@@ -1,4 +1,4 @@
-package com.example.shopytest.prendas;
+package com.example.shopytest.adapters;
 
 import android.content.Context;
 import android.view.GestureDetector;

@@ -1,4 +1,4 @@
-package com.example.shopytest;
+package com.example.shopytest.aplicacion;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,15 +12,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.shopytest.prendas.PrendaAdapter;
-import com.example.shopytest.prendas.RecyclerItemClickListener;
+import com.example.shopytest.aplicacion.identificacion.Login;
+import com.example.shopytest.R;
+import com.example.shopytest.adapters.PrendaAdapter;
+import com.example.shopytest.adapters.RecyclerItemClickListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;

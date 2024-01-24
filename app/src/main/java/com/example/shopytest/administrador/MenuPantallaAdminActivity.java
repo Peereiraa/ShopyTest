@@ -11,7 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.example.shopytest.Login;
+import com.example.shopytest.aplicacion.identificacion.Login;
 import com.example.shopytest.R;
 import com.example.shopytest.administrador.ropa.AgregarPrenda;
 import com.example.shopytest.administrador.ropa.EliminarRopa;
@@ -38,7 +38,7 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
     /**
      * TextView que muestra el nombre del administrador.
      */
-    private TextView textCerrarSesion, nombredeadmin;
+    private TextView nombredeadmin;
 
     /**
      * ImageView utilizada para cerrar sesión al hacer clic.
@@ -64,7 +64,6 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
 
         agregarprenda = findViewById(R.id.crearprenda);
         mAuth = FirebaseAuth.getInstance();
-        textCerrarSesion = findViewById(R.id.textCerrarSesion);
         imageCerrarSesion = findViewById(R.id.imageCerrarSesion);
         nombredeadmin = findViewById(R.id.nombredeadmin);
         gestionarusuarios = findViewById(R.id.gestionarusuarios);
@@ -94,28 +93,6 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuPantallaAdminActivity.this, ListaUsuarios.class);
                 startActivity(intent);
-            }
-        });
-
-        textCerrarSesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MenuPantallaAdminActivity.this);
-                builder.setMessage("¿Estás seguro de que quieres cerrar sesión?")
-                        .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                cerrarSesion();
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // No hacer nada, simplemente cerrar el diálogo
-                                dialog.dismiss();
-                            }
-                        })
-                        .show();
             }
         });
 
