@@ -115,13 +115,25 @@ public class Categorias extends AppCompatActivity {
             }
         });
 
-        iconoCarrito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Categorias.this, Carrito.class);
-                startActivity(intent);
-            }
-        });
+        if (currentUser != null) {
+            iconoCarrito.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Categorias.this, Carrito.class);
+                    startActivity(intent);
+                }
+            });
+        } else{
+
+            iconoCarrito.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(Categorias.this, "Inicia sesión para acceder al carrito", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Categorias.this, Login.class));
+                }
+            });
+
+        }
 
         if (currentUser != null) {
             // Si el usuario está autenticado, permite acceder al perfil

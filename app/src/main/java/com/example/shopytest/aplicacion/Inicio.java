@@ -137,13 +137,24 @@ public class Inicio extends AppCompatActivity {
             }
         });
 
-        iconoCarrito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Inicio.this, Carrito.class);
-                startActivity(intent);
-            }
-        });
+
+        if (currentUser != null) {
+            iconoCarrito.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Inicio.this, Carrito.class);
+                    startActivity(intent);
+                }
+            });
+        } else {
+            iconoCarrito.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(Inicio.this, "Inicia sesión para acceder al carrito", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Inicio.this, Login.class));
+                }
+            });
+        }
 
 
         if (currentUser != null) {

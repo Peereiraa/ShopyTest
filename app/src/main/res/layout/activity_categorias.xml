@@ -11,8 +11,7 @@
         android:id="@+id/logoshopy"
         android:layout_width="263dp"
         android:layout_height="81dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="63dp"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="12dp"
         android:src="@drawable/image_2" />
@@ -21,8 +20,8 @@
         android:id="@+id/logo"
         android:layout_width="46dp"
         android:layout_height="47dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="323dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="30dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="31dp"
         android:scaleType="centerCrop"
@@ -34,8 +33,8 @@
         android:id="@+id/categorias"
         android:layout_width="22dp"
         android:layout_height="15dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="42dp"
         android:background="@drawable/categorias"
@@ -43,9 +42,9 @@
 
     <View
         android:id="@+id/rectangle_7"
-        android:layout_width="391dp"
+        android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="103dp"
         android:background="@drawable/rectangle_7" />
@@ -54,17 +53,17 @@
         android:id="@+id/frame_20"
         android:layout_width="369dp"
         android:layout_height="27dp"
-        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="117dp"
         android:clipToOutline="true">
 
         <TextView
             android:id="@+id/hombre"
-            android:layout_width="71dp"
-            android:layout_height="22dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="42dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
             android:layout_alignParentTop="true"
             android:text="@string/hombre"
             android:textAppearance="@style/hombre"
@@ -75,10 +74,10 @@
 
         <TextView
             android:id="@+id/mujer"
-            android:layout_width="52dp"
-            android:layout_height="25dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="165dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="145dp"
             android:layout_alignParentTop="true"
             android:text="@string/mujer"
             android:textAppearance="@style/mujer"
@@ -89,10 +88,10 @@
 
         <TextView
             android:id="@+id/ninos"
-            android:layout_width="50dp"
-            android:layout_height="22dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="269dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
             android:layout_alignParentTop="true"
             android:text="@string/ninos"
             android:textAppearance="@style/ninos"
@@ -103,29 +102,43 @@
     </RelativeLayout>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_below="@id/rectangle_7" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/rectangle_7">
 
-        <!-- Espacio con la barra -->
         <RelativeLayout
-            android:paddingBottom="55dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="2">
+            android:layout_height="wrap_content">
 
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true" />
+
+
+            <!-- Espacio con la barra -->
             <TextView
                 android:id="@+id/espacioblanco"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="85dp"
                 android:gravity="top"
+                android:layout_below="@+id/recyclerView"
                 />
+
+
+
+
         </RelativeLayout>
+
+    </ScrollView>
+
 
         <!-- Repite esta estructura para más prendas -->
 
@@ -135,14 +148,16 @@
         android:id="@+id/barracategorias"
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:layout_marginTop="680dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/frame_19"
         android:elevation="5dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="700dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:translationZ="10dp">
