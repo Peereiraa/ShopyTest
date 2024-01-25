@@ -3,6 +3,8 @@
     <string name="app_name">ShopyTest</string>
     <string name="login">Anmelden</string>
     <string name="bienvenido_">Willkommen bei ShopyTest, melde dich hier an!</string>
+    <string name="olvidecontraseñatexto">Hast du dein Passwort vergessen? Hol es dir hier zurück</string>
+    <string name="cambiarcorreotexto">E-Mail-Adresse ändern</string>
     <string name="correo_elec">E-Mail</string>
     <string name="si_no_logue">Wenn nicht eingeloggt</string>
     <string name="google">Google</string>

@@ -189,8 +189,6 @@ public class Register extends AppCompatActivity {
                     Map<String, Object> map = new HashMap<>();
                     map.put("id", id);
                     map.put("name", nombre);
-                    map.put("email", email);
-                    map.put("pass", contra);
 
                     mFirestore.collection("user").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

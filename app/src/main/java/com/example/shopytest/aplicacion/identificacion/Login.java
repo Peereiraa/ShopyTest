@@ -75,6 +75,9 @@
         /** Indicador de visibilidad de la contraseña. */
         private boolean esVisible = false;
 
+        /**Variable para accion de eliminar contrasela */
+        private TextView olvidecontraseña;
+
 
         /**
          * Método llamado cuando la actividad se está creando.
@@ -95,6 +98,7 @@
             nomostrarContraseña = findViewById(R.id.novercontraseña);
             volveralinicio = findViewById(R.id.volver);
             googlelogin = findViewById(R.id.google);
+            olvidecontraseña = findViewById(R.id.olvidecontraseña);
 
             login = findViewById(R.id.rectangle_2);
             mAuth = FirebaseAuth.getInstance();
@@ -115,6 +119,25 @@
                     googleSignIn();
                 }
             });
+
+
+            olvidecontraseña.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if(!ponerCorreo.getText().toString().equals("")){
+                        enviarCorreoRestablecimiento(ponerCorreo.getText().toString().trim());
+                    }else{
+                        Toast.makeText(Login.this, "Credenciales inválidas. Verifica tu correo y contraseña.", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
+
+
+
+
 
             volveralinicio.setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -261,6 +284,27 @@
                 }
             }
         }
+
+        /**
+         * Envía un correo de restablecimiento de contraseña a la dirección de correo proporcionada.
+         *
+         * @param correo Dirección de correo electrónico a la que se enviará el correo de restablecimiento de contraseña.
+         */
+        private void enviarCorreoRestablecimiento(String correo) {
+
+            mAuth.sendPasswordResetEmail(correo)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(Login.this, "Se ha enviado un correo de restablecimiento de contraseña a tu dirección de correo electrónico.", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(Login.this, "Error al enviar el correo de restablecimiento de contraseña. Verifica tu correo electrónico.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
+
 
         /**
          * Autentica al usuario en Firebase utilizando el token de ID de Google.

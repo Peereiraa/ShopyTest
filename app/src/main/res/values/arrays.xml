@@ -3,6 +3,6 @@
     <string-array name="genero_array">
         <item>Hombre</item>
         <item>Mujer</item>
-        <item>Niños</item>
+        <item>Niño</item>
     </string-array>
 </resources>

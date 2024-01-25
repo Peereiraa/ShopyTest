@@ -2,6 +2,8 @@
     <string name="app_name">ShopyTest</string>
     <string name="login">Iniciar Sesion</string>
     <string name="bienvenido_">Bienvenido a ShopyTest, inicia sesion aqui!</string>
+    <string name="olvidecontraseñatexto">¿Olvidaste tu contraseña? Recuperala aqui</string>
+    <string name="cambiarcorreotexto">Cambiar correo electronico</string>
     <string name="correo_elec">Correo electronico</string>
     <string name="si_no_logue">Si no logueate</string>
     <string name="google">Google</string>

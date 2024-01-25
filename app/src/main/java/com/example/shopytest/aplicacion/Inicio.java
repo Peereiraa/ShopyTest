@@ -68,6 +68,7 @@ public class Inicio extends AppCompatActivity {
 
     private FirebaseFirestore db;
 
+
     /**
      * Método llamado cuando la actividad se está creando.
      *

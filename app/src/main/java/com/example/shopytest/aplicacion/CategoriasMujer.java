@@ -254,6 +254,7 @@ public class CategoriasMujer extends AppCompatActivity {
                         String idPrenda = documento.getId();
                         String nombrePrenda = documento.getString("Nombre");
                         Double precioPrenda = documento.getDouble("Precio");
+                        String descripcionPrenda = documento.getString("Descripcion");
                         String imageUrlPrenda = documento.getString("UrlImagen");
 
                         String precioString = String.valueOf(precioPrenda);
@@ -263,6 +264,7 @@ public class CategoriasMujer extends AppCompatActivity {
                         intent.putExtra("id", idPrenda);
                         intent.putExtra("nombre", nombrePrenda);
                         intent.putExtra("precio", precioString);
+                        intent.putExtra("descripcion", descripcionPrenda);
                         intent.putExtra("imageUrl", imageUrlPrenda);
 
                         // Iniciar la nueva actividad
