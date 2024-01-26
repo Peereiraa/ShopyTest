@@ -189,7 +189,7 @@ public class Register extends AppCompatActivity {
                     Map<String, Object> map = new HashMap<>();
                     map.put("id", id);
                     map.put("name", nombre);
-
+                    map.put("email", email);
                     mFirestore.collection("user").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {

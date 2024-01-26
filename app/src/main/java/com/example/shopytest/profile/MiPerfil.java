@@ -22,6 +22,7 @@
     import com.bumptech.glide.Glide;
     import com.example.shopytest.aplicacion.Perfil;
     import com.example.shopytest.R;
+    import com.example.shopytest.aplicacion.identificacion.Login;
     import com.google.android.gms.tasks.OnCompleteListener;
     import com.google.android.gms.tasks.OnFailureListener;
     import com.google.android.gms.tasks.OnSuccessListener;
@@ -201,34 +202,11 @@
                 }
             });
 
-
-            mFirestore.collection("user").document(currentUserId)
-                    .get()
-                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-                            if (documentSnapshot.exists()) {
-                                String nombreUsuario = documentSnapshot.getString("name");
-                                String emailUsuario = documentSnapshot.getString("email");
-
-                                nombreEditText.setText(nombreUsuario);
-                                emailEditText.setText(emailUsuario);
-                                idEditText.setText(user.getUid());
-                            }
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-
-                        }
-                    });
-
             guardarCambiosBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     String nuevoNombre = nombreEditText.getText().toString().trim();
-                    String nuevoCorreo = emailEditText.getText().toString().trim();
+
 
 
                     if (!TextUtils.isEmpty(nuevoNombre)) {
@@ -309,7 +287,7 @@
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             if (documentSnapshot.exists()) {
                                 String nombreUsuario = documentSnapshot.getString("name");
-                                String emailUsuario = documentSnapshot.getString("email");
+                                String emailUsuario = user.getEmail();
 
                                 nombreEditText.setText(nombreUsuario);
                                 emailEditText.setText(emailUsuario);
@@ -378,8 +356,26 @@
 
                             // Validar que los correos electrónicos sean iguales
                             if (nuevoCorreo.equals(confirmarCorreo)) {
-                                // Realizar el cambio de correo electrónico
-                                cambiarCorreo(nuevoCorreo);
+
+                                if (user != null) {
+
+                                    user.verifyBeforeUpdateEmail(nuevoCorreo)
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if (task.isSuccessful()) {
+                                                        Toast.makeText(getApplicationContext(), "Te hemos enviado un correo de confirmacion para aplicar el cambio", Toast.LENGTH_SHORT).show();
+                                                        mAuth.signOut();
+                                                        Intent intent = new Intent(MiPerfil.this, Login.class);
+                                                        startActivity(intent);
+
+                                                    } else {
+                                                        // Manejar el error de actualización del correo
+                                                        Toast.makeText(getApplicationContext(), "Error al actualizar el correo", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            });
+                                }
                             } else {
                                 Toast.makeText(MiPerfil.this, "Los correos electrónicos no coinciden", Toast.LENGTH_SHORT).show();
                             }
@@ -396,25 +392,7 @@
             builder.show();
         }
 
-        private void cambiarCorreo(String nuevoCorreo) {
 
-            user.updateEmail(nuevoCorreo)
-                    .addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            // Enviar el correo de verificación
-                            user.sendEmailVerification()
-                                    .addOnCompleteListener(emailVerificationTask -> {
-                                        if (emailVerificationTask.isSuccessful()) {
-                                            Toast.makeText(MiPerfil.this, "Correo actualizado. Se ha enviado un correo de verificación.", Toast.LENGTH_SHORT).show();
-                                        } else {
-                                            Toast.makeText(MiPerfil.this, "Error al enviar el correo de verificación.", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                        } else {
-                            Toast.makeText(MiPerfil.this, "Error al actualizar el correo", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        }
 
         /**
          * Método llamado cuando una actividad iniciada para obtener resultados finaliza.

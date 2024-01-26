@@ -200,6 +200,7 @@
          * @param correo Correo electrónico del usuario.
          * @param contraseña Contraseña del usuario.
          */
+
         private void loginUser(String correo, String contraseña) {
             mAuth.signInWithEmailAndPassword(correo, contraseña)
                     .addOnCompleteListener(task -> {
@@ -218,6 +219,10 @@
                                         // Si el correo no coincide con el dominio personalizado, considerarlo como un usuario normal
                                         finish();
                                         startActivity(new Intent(Login.this, Inicio.class));
+
+                                        // Actualizar el correo en Firestore
+                                        actualizarCorreoEnFirestore(user.getUid(), userEmail);
+
                                         Toast.makeText(Login.this, "Bienvenido Usuario", Toast.LENGTH_SHORT).show();
                                     }
                                 }
@@ -228,6 +233,28 @@
                     })
                     .addOnFailureListener(e -> Toast.makeText(Login.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show());
         }
+
+        private void actualizarCorreoEnFirestore(String userId, String nuevoCorreo) {
+            mFirestore.collection("user").document(userId)
+                    .update("email", nuevoCorreo)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            // Puedes realizar acciones adicionales después de actualizar el correo en Firestore
+                            // Por ejemplo, mostrar un mensaje o realizar otras operaciones.
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Manejar el error al actualizar en Firestore
+                            Toast.makeText(getApplicationContext(), "Error al actualizar el correo en Firestore", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
+
+// ...
+
 
         /**
          * Alterna la visibilidad de la contraseña para mostrar u ocultar el texto.
@@ -365,6 +392,8 @@
                         }
                     });
         }
+
+
 
 
 

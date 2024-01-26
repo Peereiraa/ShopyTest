@@ -1,5 +1,6 @@
 package com.example.shopytest.administrador.usuarios;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 
@@ -30,6 +31,8 @@ public class Usuario {
      * URL de la foto del usuario.
      */
     private String photoUrl;
+
+
 
     /**
      * Método estático que crea y devuelve un objeto Usuario a partir de un DocumentSnapshot de Firestore.
