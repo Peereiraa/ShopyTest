@@ -166,7 +166,6 @@
         android:layout_height="19dp"
         android:layout_below="@+id/rectangle_2"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="152dp"
         android:layout_marginTop="38dp"
         android:fontFamily="@font/poppins"
         android:gravity="top"
@@ -177,9 +176,9 @@
         android:id="@+id/google_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="150dp"
+        android:layout_marginStart="145dp"
         android:layout_marginTop="562dp"
         android:src="@drawable/google_logo" />
 
@@ -189,7 +188,6 @@
         android:layout_height="21dp"
         android:layout_below="@+id/sinologueaste"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="182dp"
         android:layout_marginTop="21dp"
         android:fontFamily="@font/poppins"
         android:gravity="top"
@@ -202,7 +200,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/google_logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="89dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins"
 

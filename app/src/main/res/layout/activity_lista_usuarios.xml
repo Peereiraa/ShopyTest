@@ -13,7 +13,7 @@
         android:id="@+id/fondoverde"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:background="#1C756C" />
 
@@ -55,7 +55,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#009688"
-        android:layout_marginLeft="320dp"
+        android:layout_marginStart="320dp"
         app:srcCompat="@drawable/user"
         android:onClick="mostrarMenuEmergente">
 
