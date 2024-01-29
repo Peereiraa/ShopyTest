@@ -234,6 +234,12 @@
                     .addOnFailureListener(e -> Toast.makeText(Login.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show());
         }
 
+        /**
+         * Actualiza la dirección de correo electrónico de un usuario en Firestore.
+         *
+         * @param userId       Identificador único del usuario cuyo correo se actualizará.
+         * @param nuevoCorreo  Nuevo correo electrónico que se asignará al usuario.
+         */
         private void actualizarCorreoEnFirestore(String userId, String nuevoCorreo) {
             mFirestore.collection("user").document(userId)
                     .update("email", nuevoCorreo)
@@ -252,8 +258,6 @@
                         }
                     });
         }
-
-// ...
 
 
         /**

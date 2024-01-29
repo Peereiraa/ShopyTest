@@ -121,15 +121,6 @@ public class EliminarRopa extends AppCompatActivity {
         recyclerViewNinos.setAdapter(adapterNinos);
 
 
-        obtenerPrendasHombre(prendasHombre -> {
-            // Ahora puedes trabajar con la lista de prendasHombre
-            adapterHombre.setPrendas(prendasHombre);
-        });
-
-        obtenerPrendasMujer(prendasMujer ->{
-            adapterMujer.setPrendas(prendasMujer);
-        });
-
         checkHombre.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 ViewGroup.LayoutParams layoutParams = recyclerViewHombre.getLayoutParams();
