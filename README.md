@@ -1,1 +1,3 @@
-Proyecto Chido
+SHOPYTEST
+
+Aplicacion Movil para Android
