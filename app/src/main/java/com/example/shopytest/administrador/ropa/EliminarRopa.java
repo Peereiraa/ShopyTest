@@ -91,10 +91,6 @@ public class EliminarRopa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eliminar_ropa);
 
-
-
-        SearchView searchView = findViewById(R.id.searchViewUsuarios);
-
         // Inicializar RecyclerViews
         recyclerViewHombre = findViewById(R.id.recyclerViewHombre);
         recyclerViewMujer = findViewById(R.id.recyclerViewMujer);

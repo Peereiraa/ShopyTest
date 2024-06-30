@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.shopytest.adapters.CarritoAdapter;
 import com.example.shopytest.R;
@@ -46,6 +50,8 @@ public class Carrito extends AppCompatActivity {
      */
     private CarritoAdapter carritoAdapter;
 
+    private ImageView icono_categorias;
+
     /**
      * Método llamado cuando la actividad es creada. Aquí se inicializan los componentes de la interfaz
      * y se obtienen los artículos del carrito de la base de datos.
@@ -60,6 +66,7 @@ public class Carrito extends AppCompatActivity {
         preciototal = findViewById(R.id.preciototal);
         recyclerView = findViewById(R.id.recyclerViewCarrito);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        icono_categorias = findViewById(R.id.icono_categorias);
 
         carritoAdapter = new CarritoAdapter(new ArrayList<>(), this);
         recyclerView.setAdapter(carritoAdapter);
@@ -86,6 +93,28 @@ public class Carrito extends AppCompatActivity {
                         // Manejar los errores si la consulta falla
                     }
                 });
+        icono_categorias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Carrito.this, Categorias.class);
+                startActivity(intent);
+            }
+        });
+
+        View botonPagar = findViewById(R.id.botonpagar);
+        botonPagar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (carritoAdapter.getItemCount() > 0) {
+                    // Iniciar la actividad de Pagar
+                    Intent intent = new Intent(Carrito.this, Pagar.class);
+                    startActivity(intent);
+                } else {
+                    // Mostrar mensaje
+                    Toast.makeText(Carrito.this, "Debes agregar un artículo a la tienda", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     /**

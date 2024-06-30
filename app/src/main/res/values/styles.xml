@@ -267,6 +267,11 @@
         <item name="android:textSize">17sp</item>
     </style>
 
+    <style name="tituloIncidencias">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 
     <!-- strings.xml -->
     <string name="contrase_a" translatable="false">

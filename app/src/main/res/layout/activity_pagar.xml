@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <View
+        android:id="@+id/fondoverde"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="#1C756C" />
+
+    <!-- Número de tarjeta -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/numeroTarjetaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fondoverde"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Número de tarjeta"
+        android:inputType="number"
+        app:counterMaxLength="19">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/numeroTarjetaEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789 "
+            android:maxLength="19"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Nombre del titular -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nombreTitularLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numeroTarjetaLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Nombre del titular">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nombreTitularEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contenedor horizontal para la fecha de caducidad y el CVC -->
+    <LinearLayout
+        android:id="@+id/linearseparar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/nombreTitularLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:weightSum="2">
+
+        <!-- Fecha de caducidad -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fechaCaducidadLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:hint="Fecha de caducidad (MM/YY)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fechaCaducidadEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- CVC -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cvcLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:hint="CVC"
+            app:counterMaxLength="3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cvcEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:maxLength="3"
+                android:inputType="numberPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- Botón de pagar -->
+    <Button
+        android:id="@+id/pagarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearseparar"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Pagar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:fontFamily="@font/poppins" />
+
+    <TextView
+        android:id="@+id/no_tienes_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pagarButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:text="------------- Otros metodos de pago -------------"
+        android:textAppearance="@style/no_tienes_c" />
+
+    <ImageView
+        android:id="@+id/pagarPaypal"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/no_tienes_c"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/paypal_logo_2" />
+
+    <Button
+        android:id="@+id/cancelarButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pagarButton"
+        android:layout_marginTop="260dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="Cancelar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins" />
+
+</RelativeLayout>

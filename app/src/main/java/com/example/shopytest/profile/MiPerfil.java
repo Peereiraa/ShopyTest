@@ -20,6 +20,7 @@
     import android.widget.Toast;
 
     import com.bumptech.glide.Glide;
+    import com.example.shopytest.administrador.incidencias.CrearIncidenciaActivity;
     import com.example.shopytest.aplicacion.Perfil;
     import com.example.shopytest.R;
     import com.example.shopytest.aplicacion.identificacion.Login;
@@ -140,10 +141,10 @@
             importarfoto = findViewById(R.id.cambiarfoto);
             nombreEditText = findViewById(R.id.nombrecuadro);
             emailEditText = findViewById(R.id.emailcuadro);
-            idEditText = findViewById(R.id.contrasenacuadro);
             guardarCambiosBtn = findViewById(R.id.guardardatos);
             volverboton = findViewById(R.id.volver);
             cambiarcorreo = findViewById(R.id.cambiarcorreo);
+
 
 
             user = FirebaseAuth.getInstance().getCurrentUser();
@@ -291,7 +292,7 @@
 
                                 nombreEditText.setText(nombreUsuario);
                                 emailEditText.setText(emailUsuario);
-                                idEditText.setText(user.getUid());
+
 
                                 // Verificar el proveedor de autenticación
                                 for (UserInfo userInfo : user.getProviderData()) {

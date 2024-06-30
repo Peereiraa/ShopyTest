@@ -113,7 +113,7 @@
         android:layout_alignTop="@id/mis_compras"
         android:layout_marginStart="10dp"
         android:layout_alignParentStart="true"
-        android:src="@drawable/folder" />
+        android:src="@drawable/wallet" />
 
     <ImageView
         android:id="@+id/icono_compras_ir"
@@ -133,7 +133,7 @@
         android:layout_marginLeft="76.02dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="558dp"
-        android:text="@string/opcionsaldo"
+        android:text="@string/opcionIncidencia"
         android:fontFamily="@font/poppins"
         android:textAppearance="@style/saldo"
         android:gravity="top"
@@ -146,10 +146,10 @@
         android:layout_alignTop="@id/saldo"
         android:layout_marginStart="10dp"
         android:layout_alignParentStart="true"
-        android:src="@drawable/wallet" />
+        android:src="@drawable/folder" />
 
     <ImageView
-        android:id="@+id/icono_saldo_ir"
+        android:id="@+id/crearticket"
         android:layout_width="28.67dp"
         android:layout_height="30dp"
         android:layout_alignTop="@id/saldo"

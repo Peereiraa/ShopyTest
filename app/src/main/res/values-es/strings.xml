@@ -72,7 +72,7 @@
     <string name="tucuentaperfil">Tu cuenta</string>
     <string name="opcionmiperfil">Mi Perfil</string>
     <string name="opcionmiscompras">Mis compras</string>
-    <string name="opcionsaldo">Saldo</string>
+    <string name="opcionIncidencia">Crear Ticket</string>
     <string name="contraseñaregister">Contraseña</string>
     <string name="repetircontraseñaregister">Repetir Contraseña</string>
     <string name="nombreusuariolistaadminsrecicle">Nombre de Usuario</string>
@@ -82,5 +82,6 @@
     <string name="categoras">Categorías</string>
     <string name="carrito">Carrito</string>
     <string name="perfil">Perfil</string>
-    <string name="cargando">Cargando...</string>
+    <string name="cargando">Cargando…</string>
+
 </resources>

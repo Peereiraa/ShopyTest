@@ -33,7 +33,6 @@ public class Usuario {
     private String photoUrl;
 
 
-
     /**
      * Método estático que crea y devuelve un objeto Usuario a partir de un DocumentSnapshot de Firestore.
      *

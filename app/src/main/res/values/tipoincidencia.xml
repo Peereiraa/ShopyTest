@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipoincidencia">
+        <item>Inicio</item>
+        <item>Categorias Hombre</item>
+        <item>Categorias Mujer</item>
+        <item>Categorias Niños</item>
+        <item>Cesta</item>
+        <item>Ajustes Usuario</item>
+    </string-array>
+</resources>

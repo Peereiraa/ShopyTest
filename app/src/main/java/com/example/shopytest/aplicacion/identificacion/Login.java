@@ -354,48 +354,68 @@
                                     String id = user.getUid();
                                     String name = user.getDisplayName();
                                     String email = user.getEmail();
-                                    String photoUrl = "";
-                                    if (user.getPhotoUrl() != null) {
-                                        photoUrl = user.getPhotoUrl().toString();
-                                    }
+                                    String photoUrl = user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : "";
 
+                                    // Verificar si el usuario ya existe en Firestore
+                                    mFirestore.collection("user").document(id).get()
+                                            .addOnSuccessListener(documentSnapshot -> {
+                                                if (documentSnapshot.exists()) {
+                                                    // El usuario ya existe, verificar la URL de la foto
+                                                    String storedPhotoUrl = documentSnapshot.getString("photoUrl");
+                                                    if (storedPhotoUrl != null && !storedPhotoUrl.equals(photoUrl)) {
+                                                        // La URL de la foto ha cambiado, actualizar en Firestore
+                                                        mFirestore.collection("user").document(id)
+                                                                .update("photoUrl", photoUrl)
+                                                                .addOnSuccessListener(aVoid -> {
+                                                                    // URL de la foto actualizada con éxito
+                                                                    proceedToInicio();
+                                                                })
+                                                                .addOnFailureListener(e -> {
+                                                                    // Manejar el error al actualizar la URL de la foto
+                                                                    Toast.makeText(Login.this, "Error al actualizar la URL de la foto", Toast.LENGTH_SHORT).show();
+                                                                });
+                                                    } else {
+                                                        // La URL de la foto es la misma, proceder a Inicio
+                                                        proceedToInicio();
+                                                    }
+                                                } else {
+                                                    // El usuario no existe, guardar nueva información en Firestore
+                                                    Map<String, Object> userData = new HashMap<>();
+                                                    userData.put("id", id);
+                                                    userData.put("name", name);
+                                                    userData.put("photoUrl", photoUrl);
+                                                    userData.put("email", email);
 
-
-                                    Map<String, Object> userData = new HashMap<>();
-                                    userData.put("id", id);
-                                    userData.put("name", name);
-                                    userData.put("photoUrl", photoUrl);
-                                    userData.put("email", email);
-
-
-
-                                    mFirestore.collection("user").document(id)
-                                            .set(userData)
-                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void aVoid) {
-                                                    // On successful save, proceed to Login activity
-                                                    startActivity(new Intent(Login.this, Inicio.class));
-                                                    finish();
-                                                    Toast.makeText(Login.this, "Cuenta creada con éxito", Toast.LENGTH_SHORT).show();
+                                                    mFirestore.collection("user").document(id)
+                                                            .set(userData)
+                                                            .addOnSuccessListener(aVoid -> {
+                                                                // Información guardada con éxito, proceder a Inicio
+                                                                proceedToInicio();
+                                                            })
+                                                            .addOnFailureListener(e -> {
+                                                                // Manejar el error al guardar la información
+                                                                Toast.makeText(Login.this, "Error al guardar la información del usuario", Toast.LENGTH_SHORT).show();
+                                                            });
                                                 }
                                             })
-                                            .addOnFailureListener(new OnFailureListener() {
-                                                @Override
-                                                public void onFailure(@NonNull Exception e) {
-                                                    Toast.makeText(Login.this, "Error al guardar", Toast.LENGTH_SHORT).show();
-                                                }
+                                            .addOnFailureListener(e -> {
+                                                // Manejar el error al obtener el documento del usuario
+                                                Toast.makeText(Login.this, "Error al obtener la información del usuario", Toast.LENGTH_SHORT).show();
                                             });
-
-
                                 }
                             } else {
-                                Toast.makeText(Login.this, "Authentication failed.",
-                                        Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Error en la autenticación", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
         }
+
+        // Método para proceder a la actividad de Inicio
+        private void proceedToInicio() {
+            startActivity(new Intent(Login.this, Inicio.class));
+            finish();
+        }
+
 
 
 

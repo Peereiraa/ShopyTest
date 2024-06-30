@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.example.shopytest.administrador.incidencias.IncidenciasActivity;
 import com.example.shopytest.aplicacion.identificacion.Login;
 import com.example.shopytest.R;
 import com.example.shopytest.administrador.ropa.AgregarPrenda;
@@ -43,7 +44,7 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
     /**
      * ImageView utilizada para cerrar sesión al hacer clic.
      */
-    private ImageView imageCerrarSesion;
+    private ImageView imageCerrarSesion, botonIncidencias;
 
     /**
      * Instancia de FirebaseAuth utilizada para gestionar la autenticación de usuarios.
@@ -61,7 +62,7 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_pantalla_admin);
 
-
+        botonIncidencias = findViewById(R.id.botonIncidencias);
         agregarprenda = findViewById(R.id.crearprenda);
         mAuth = FirebaseAuth.getInstance();
         imageCerrarSesion = findViewById(R.id.imageCerrarSesion);
@@ -76,6 +77,14 @@ public class MenuPantallaAdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuPantallaAdminActivity.this, EliminarRopa.class);
+                startActivity(intent);
+            }
+        });
+
+        botonIncidencias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuPantallaAdminActivity.this, IncidenciasActivity.class);
                 startActivity(intent);
             }
         });

@@ -73,7 +73,7 @@
     <string name="tucuentaperfil">Dein Konto</string>
     <string name="opcionmiperfil">Mein Profil</string>
     <string name="opcionmiscompras">Meine Einkäufe</string>
-    <string name="opcionsaldo">Kontostand</string>
+    <string name="opcionIncidencia">Erstellen Ticket</string>
     <string name="contraseñaregister">Passwort</string>
     <string name="repetircontraseñaregister">Passwort wiederholen</string>
     <string name="nombreusuariolistaadminsrecicle">Benutzername</string>
@@ -83,5 +83,6 @@
     <string name="categoras">Kategorien</string>
     <string name="carrito">Warenkorb</string>
     <string name="perfil">Profil</string>
-    <string name="cargando">Laden...</string>
+    <string name="cargando">Laden…</string>
+
 </resources>

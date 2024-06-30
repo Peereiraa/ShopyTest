@@ -1,0 +1,64 @@
+<!-- card_incidencia.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageUsuario"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_default"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/imagenredonde"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/nombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de Usuario"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/motivoIncidencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motivo: "
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/seccionIncidencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Seccion: "
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/buttonSolucionada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solucionar"
+            android:backgroundTint="@color/black"
+            android:padding="8dp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -165,4 +165,15 @@
         android:layout_margin="12dp"
         android:src="@drawable/cerrarsesion" />
 
+    <ImageView
+        android:id="@+id/botonIncidencias"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/incidenciasimagen"
+        app:tint="@color/grey_font" />
+
 </RelativeLayout>

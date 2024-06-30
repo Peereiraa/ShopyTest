@@ -4,5 +4,5 @@
         android:title="Crear usuario"/>
     <item
         android:id="@+id/opcion2"
-        android:title="Modificar usuario"/>
+        android:title="Eliminar usuario"/>
 </menu>

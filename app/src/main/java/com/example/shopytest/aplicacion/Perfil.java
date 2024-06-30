@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.shopytest.administrador.incidencias.CrearIncidenciaActivity;
 import com.example.shopytest.aplicacion.identificacion.Login;
 import com.example.shopytest.R;
 import com.example.shopytest.profile.MiPerfil;
@@ -45,7 +47,7 @@ public class Perfil extends AppCompatActivity {
     private ImageView iconoCarrito;
 
     /** ImageView para navegar a la pantalla de categorías. */
-    private ImageView iconoCategorias;
+    private ImageView iconoCategorias, crearticket;
 
     /** TextView para mostrar el nombre del usuario. */
     private TextView tuNombre;
@@ -79,6 +81,8 @@ public class Perfil extends AppCompatActivity {
         iconoCarrito = findViewById(R.id.icono_carrito);
         iconoCategorias = findViewById(R.id.icono_categorias);
         imageCerrarSesion = findViewById(R.id.imageCerrarSesion);
+        crearticket = findViewById(R.id.crearticket);
+
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -107,6 +111,15 @@ public class Perfil extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        crearticket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Perfil.this, CrearIncidenciaActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         iconoCategorias.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,7 +212,7 @@ public class Perfil extends AppCompatActivity {
             for (UserInfo userInfo : user.getProviderData()) {
                 if (userInfo.getProviderId().equals("google.com")) {
                     // Si se ha iniciado sesión con Google
-                    String photoUrl = user.getPhotoUrl().toString();
+                    Uri photoUrl = userInfo.getPhotoUrl();
 
                     // Cargar la imagen de perfil desde la URL utilizando Glide
                     Glide.with(this)
